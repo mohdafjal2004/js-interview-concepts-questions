@@ -1,0 +1,13 @@
+.electronic-devices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.Ele {
+  background-color: aqua;
+  padding: 10px 10px;
+  margin-right: 20px;
+  text-align: center;
+  height: 100px;
+}
