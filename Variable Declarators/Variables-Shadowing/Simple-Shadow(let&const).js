@@ -38,4 +38,4 @@ const test = () => {
   }
   console.log(a); //Original variable
 };
-// test();
+test();

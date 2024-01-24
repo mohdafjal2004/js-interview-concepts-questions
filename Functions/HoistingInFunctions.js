@@ -24,7 +24,8 @@ var fun = function () {
   console.log(x);
   var x = 20;
 };
-fun(); //𝗨𝗻𝗱𝗲𝗳𝗶𝗻𝗲𝗱 becoz when we have a variable in local scope but currently in the "Temporal dead zone" during logging
+fun();
+//𝗨𝗻𝗱𝗲𝗳𝗶𝗻𝗲𝗱 becoz when we have a variable in local scope but currently in the "Temporal dead zone" during logging
 
 //⁡⁢⁣⁢𝗹𝗲𝘅𝗶𝗰𝗮𝗹 𝘀𝗰𝗼𝗽𝗶𝗻𝗴⁡ : Here lexical scoping is working
 //When a variable is logged inside the function then  first it will look inside the local scope if not found

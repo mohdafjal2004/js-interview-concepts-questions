@@ -11,7 +11,9 @@ for (var i = 0; i < 3; i++) {
 //  and after every 1 second it prints 3 for 3 times like : 3 3 3
 
 // {
-//   𝗶 = 𝟬 / 𝟭 / 𝟮; //<= 𝗧𝗼𝘁𝗮𝗹 𝟯 will be picked
+//   𝗶 = 𝟬 / 𝟭 / 𝟮 / 3(here loop gets terminated); 
+// So when time gets finished of delay, it sees the 3 as input
+//
 // }
 
 //! Why single value

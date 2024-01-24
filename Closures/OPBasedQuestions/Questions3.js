@@ -1,12 +1,17 @@
 //* Q-5: How would you use a closure to create a private counter?
 function counter() {
+  //creating a variable to store the last output of counter
   var counter = 0;
+
+  //Private counter function, we are not giving the latest value
+  //of counter here meaning we are not returning anything here
   function add(increment) {
     //Closure function
     counter += increment;
   }
 
   //Another Closure function
+  //This is public funciton
   function retrieve() {
     return "Counter = " + counter;
   }
@@ -30,10 +35,10 @@ console.log(c.retrieve());
 //but public members can be accessed from outside the function
 
 //But public members can access private members within the module
-//if we want to not directly give access to a private members, indirectly
+//if we want to not directly give access to a private members,  but indirectly
 
 //we can access them by accessing public members
-//which can access private members
+//which internally can access private members
 
 //In this we declare a IIFE function to a variable,which follows
 //this design pattern of Module Pattern

@@ -22,7 +22,7 @@ function square3(num) {
   return num * num;
 }
 
-//Passing a function into another function as variable
+//Example of first class fxn :Passing a fxn into another fxn as variable
 function displaySquare(fn) {
   console.log("Square is " + fn(5));
 }

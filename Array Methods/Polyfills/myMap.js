@@ -11,7 +11,8 @@ Array.prototype.myMap = function (cb) {
     // Array.map((num,i,arr) => {}),
     //"𝘁𝗵𝗶𝘀" means the current array on which this myMap method is called
     // create the method according to the syntax of original method
-    // Instead of just pushing the current array element,  we push the result of applying the callback(cb) function to it
+    // Instead of just pushing the current array element, 
+    // we push the result of applying the callback(cb) function to it
     mappedArray.push(cb(this[i], i, this));
   }
   //? Remember "mappedArray.push(cb(this[i], i, this))" means we are passing the tranformed value to the ⁡⁢⁣⁢same index⁡ so
@@ -25,4 +26,5 @@ const nums = [1, 2, 3, 4, 5];
 const mutliplyThree = nums.myMap((num, i, arr) => {
   return num * 3;
 });
+
 console.log(mutliplyThree);

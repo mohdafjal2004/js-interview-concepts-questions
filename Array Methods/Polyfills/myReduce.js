@@ -30,7 +30,7 @@ Array.prototype.myReduce2 = function (cb, initialValue) {
 //Lets try the custom myReduce() method
 const nums = [1, 2, 3, 4, 5];
 
-const sum = nums.myReduce2((acc, curr, i, arr) => {
+const sum = nums.myReduce((acc, curr, i, arr) => {
   return acc + curr;
 }, 0);
 console.log(sum);

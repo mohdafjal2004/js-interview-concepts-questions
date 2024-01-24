@@ -38,17 +38,42 @@ fn(1, 3, 2);
 const fn2 = () => {
   console.log(arguments);
 };
-fn2(); //It won't gives desired output
+// fn2(); //It won't gives desired output
 
 // ⁡⁢⁣⁢3⁡ - "this" keyword don't work in arrow function but works completely fine in regualar function
 let user = {
   username: "Mohd Afjal",
+
   rc1: () => {
     console.log("Whatsup rc1" + this.username);
   },
+  //  Here arrow function is  not technically a method of the object.
+  // It's still a standalone function defined in the global scope,
+  // just visually nested within the object literal's curly braces.
+
+  //Because rc1 is defined in the global scope,
+  // its this value will inherit from the global scope,
+  // which typically refers to the global object {}
+
   rc2() {
     console.log("Whatsup rc2" + this.username);
   },
 };
-user.rc1()
-user.rc2()
+user.rc1();
+
+user.rc2();
+
+// this in function
+// function chai() {
+//   const username = "Afjal";
+//   console.log(this.username);
+  //undefined becoz here "this" is empty object
+// }
+
+const chai = () => {
+  // const username = "Afjal";
+  console.log(this.username);
+  console.log(this);
+  //undefined becoz here "this" is empty object
+};
+chai();

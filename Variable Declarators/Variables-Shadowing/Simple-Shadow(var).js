@@ -10,3 +10,6 @@
 // so if a variable is declared using var outside any function then it is present globally
 //and any changes made to global variable while shadowing
 //Will ultimately changes its value globally
+
+
+//It is not recommended to use var in this type of situation

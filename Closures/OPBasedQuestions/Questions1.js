@@ -21,9 +21,9 @@ function createBase(num) {
     return innerNum + num;
   };
 }
-const addSix = createBase(6);
-console.log(addSix(10));
-// console.log(addSix(20));
+const addFive = createBase(5);
+console.log(addFive(10));
+console.log(addFive(40));
 
 //Another way of calling the createBase() function and its closure
 //* console.log(createBase(6)(10));

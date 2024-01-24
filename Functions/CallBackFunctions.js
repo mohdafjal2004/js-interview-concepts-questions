@@ -18,12 +18,16 @@ document.addEventListener("click", function (params) {
 });
 
 // ⁡⁢⁣⁣𝗣𝘂𝗿𝗽𝗼𝘀𝗲 𝗼𝗳 𝗖𝗮𝗹𝗹𝗯𝗮𝗰𝗸 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻⁡ :
-// 1.⁡⁣⁣⁢Sequencing Execution⁡:Callback functions ensure that certain code doesn't execute until a specific task, often asynchronous,
+// 1.⁡⁣⁣⁢Sequencing Execution⁡:Callback functions ensure that certain code
+// doesn't execute until a specific task(often asynchronous)
 //  is completed. This helps in maintaining the order of operations.
 
-// 2.⁡⁣⁣⁢Handling Asynchronous Operations⁡:In asynchronous programming, where operations might take time to complete
-// (e.g., AJAX requests, timeouts), callback functions allow you to handle the results or errors of these operations
-//  once they're done.
+// 2.⁡⁣⁣⁢Handling Asynchronous Operations⁡:
+//In asynchronous programming, where operations might take time to complete
+// (e.g., AJAX requests, timeouts), callback functions allow you to handle the
+// results or errors of these operations  once they're done.
 
 // 3.⁡⁣⁣⁢Customizing Behavior⁡:
-// Callback functions allow you to customize what action or logic should be executed based on the outcome of a task. For example, handling success and error cases differently.
+// Callback functions allow you to customize what action
+//or logic should be executed based on the outcome of a task.
+//For example, handling success and error cases differently.

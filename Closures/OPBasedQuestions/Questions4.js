@@ -15,7 +15,7 @@ console.timeEnd("First Call");
 console.time("Second Call");
 console.log(clumsyProduct(8279, 87792));
 console.timeEnd("Second Call");
-
+ 
 // Memoize function
 function myMemoize(fn, context) {
   //fn is the function which will be memoized

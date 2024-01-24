@@ -12,7 +12,7 @@ const MapResult = arr.map((ar) => {
 //so return statement don't return anything
 
 const forEachResult = arr.forEach((ar, i) => {
-  //   return arr + 2; // undefined, becoz it return any new array
+  //   return arr + 2; // undefined, becoz  it does not6 return any new array
   arr[i] = ar + 3; // It modifies the original array
 });
 
