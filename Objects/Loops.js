@@ -8,7 +8,7 @@ const user = {
 };
 
 // For looping through the keys, we use for-in loop
-for ( key in user) {
+for (let key in user) {
   console.log(key)
     console.log(user[key])
 }

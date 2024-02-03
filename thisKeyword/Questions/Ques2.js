@@ -57,6 +57,7 @@ const object = {
     //print 4 not 5
     //And the concept of shadowing not works inside the object
     fn();
+    //Fixing the above function => //* f.bind(this)()
   },
 };
 object.method(callback);

@@ -21,12 +21,12 @@ smth();
 
 //Shadowing a block-scoped variable inside the block
 {
-  let a = 10;
+  let b = 10;
   {
-    let a = 20;
-    console.log(a);
+    let b = 20;
+    console.log(b);
   }
-  console.log(a);
+  console.log(b);
 }
 
 //Shadowing the function-scoped variable inside the function

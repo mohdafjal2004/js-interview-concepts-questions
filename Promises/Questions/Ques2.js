@@ -7,7 +7,7 @@ function job() {
   });
 }
 
-// let promise = job();
+let promise = job();
 
 promise
   .then(function () {
@@ -21,6 +21,13 @@ promise
   })
   .catch(function () {
     console.log("Error 1");
+    // If an error occurs and is caught by a .catch() block,
+    // the subsequent .then() blocks are not affected,
+    // and the execution continues.
+
+    //If you want to prevent the subsequent .then() blocks
+    // from executing after an error, you can return
+    //a rejected promise inside the .catch() block:
   })
   .then(function () {
     console.log("Success 4");
@@ -50,11 +57,11 @@ let promise2 = job2(true);
 promise2
   .then(function (res) {
     console.log(res); //"success"
-    return job2(false); // it returns "error"
+    return job2(false); 
   })
   //   so to handle "error" from upper .then(), we use .catch()
   .catch(function (error) {
-    console.log(error);
+    console.log(error); // it returns "error"
     return "Error Caught";
   })
 

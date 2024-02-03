@@ -21,15 +21,15 @@ multiply1(...arr);
 // Example-2 of using Spread Operator as argument and rest operator as parameter
 
 //Using the rest operator as parameter
-function multiply2(...nums) {
-  console.log(nums);
+function multiply2(arg1,arg2,...nums) {
+  console.log(arg1,arg2,nums);
 }
 
-var arr = [5, 6];
+var arr = [5, 6, 7, 9, 0, 5, 8, 9];
 
 //Using the spread Operator as argument,
 // this operator will spread and pass array values
-multiply2(...arr);
+multiply2("Hello", "World", ...arr);
 
 //*Output Based Questions
 

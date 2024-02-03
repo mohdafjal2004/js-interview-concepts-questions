@@ -11,6 +11,8 @@ async function fetchData() {
   return "Data";
 }
 
+fetchData();
+
 async function main() {
   console.log("Start");
   const result = await fetchData();
@@ -29,7 +31,7 @@ async function greet() {
 }
 
 // Calling the async function
-async function main() {
+async function main2() {
   console.log("Start");
   try {
     await greet();
@@ -40,4 +42,4 @@ async function main() {
 }
 
 // Executing the main function
-main();
+// main();

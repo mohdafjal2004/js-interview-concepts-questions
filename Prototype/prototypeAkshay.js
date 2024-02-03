@@ -1,6 +1,6 @@
 let arr = ["arr", "Aditiya"];
 
-let object = {
+let person = {
   name: "Afjal",
   city: "Nawalgarh",
   getIntro: function () {
@@ -20,7 +20,7 @@ let object2 = {
 }; 
 
 //Here we are attaching the object to object2 using prototype object
-object2.__proto__ = object;
+object2.__proto__ = person;
 console.log(object2.city);
 //So here object2 is inhereting proprties and method of object
 

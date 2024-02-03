@@ -2,27 +2,28 @@
 
 // !Problem in asynchronous code
 //? Synchronous Code
-// console.log("start");
+console.log("start");
 
 //? Asynchronous Code
-// function importantAction(username) {
-//   setTimeout(() => {
-//     return `Subscribe to ${username}`;
-//   }, 1000);
-// }
-// const message = importantAction("Mohd Afjal");
+function importantAction(username) {
+  setTimeout(() => {
+    return `Subscribe to ${username}`;
+  }, 1000);
+}
+const message = importantAction("Mohd Afjal");
 //? Undefined, becoz result of asynchronous code is not handled
-// console.log(message);
+console.log(message);
 
 //? Synchronous Code
-// console.log("stop");
+console.log("stop");
 
-//! Resolving above Asynchronous code
+//* Solution : Resolving above Asynchronous code
 console.log("Start");
 
-function importantAction(username, cb) {
+function importantAction2(username, callback) {
   setTimeout(() => {
-    cb(`Brand ${username}`);
+    const message = `Brand ${username}`;
+    callback(message);
   }, 1000);
 }
 function winTheWorld(action, cb) {
@@ -34,10 +35,10 @@ function winTheWorld(action, cb) {
 // Callback function to be passed as argument into another function
 // for resolving the result of asychronous function
 
-const message = importantAction("Mohd Afjal", function (message) {
+importantAction2("Mohd Afjal", (message) => {
   console.log(message);
   //  We are nesting winTheWorld() into the callback function of
-  // importantAction() so that when importantAction() function
+  // importantAction() so t.hat when importantAction() function
   //  is called then only the winTheWorld() function is called.
   //But this nesting of winTheWorld() inside the importantAction()
   //   function making the code messy, this is called call-back hell

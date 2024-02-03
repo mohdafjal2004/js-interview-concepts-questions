@@ -6,12 +6,14 @@ function add(a) {
       return add(a + b);
     }
     // It checks whether we have any value of "b"
-    //if it has the value of "b" then it add a + b
+    // if it has the value of "b" then it add a + b
     // and again call the function "a" which will repeat the function
     return a;
   };
 }
-console.log(add(5)(2)(2)(1)(9)(78)(32)(23)(5)(2)(2)(1)(9)(78)(32)(23)(67)(2)(1)());
+console.log(
+  add(5)(2)(2)(1)(9)(78)(32)(23)(5)(2)(2)(1)(9)(78)(32)(23)(67)(2)(1)()
+);
 
 // * Q-4 Currying vs Partial Application
 

@@ -26,6 +26,10 @@ const elements = [0, 1, 2];
 // Push method without apply() is simply pushing entire array like this
 //  [ 'a', 'b', [ 0, 1, 2 ] ], so we use apply() method to do
 
+//Method-1
+console.log([...array,...elements])
+
+//Method-2
 array.push.apply(array, elements);
 
 console.log(array);
@@ -39,6 +43,7 @@ const numbers = [5, 6, 2, 3, 7];
 console.log(Math.max(5, 6, 2, 3, 7));
 //Using Built-in Methods of Math, which can calculate on numbers which
 //are simply passed inside it,will give desired result, but it will not
-//work on arrays or array-like objects, so we use apply() for array
+//allow flexbility to add or remove elements in array, readability, maintainability,
+// so we use apply() for array
 
 console.log(Math.max.apply(null, numbers));

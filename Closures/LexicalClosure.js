@@ -12,6 +12,9 @@ function global() {
   };
 }
 
+
+const getData = global()
+getData(10)
 //Here local() function is closure
 
 //here local() function is closure becoz it is defined inside

@@ -17,7 +17,7 @@ console.log("Asynchronous: 3 End");
 
 // Becoz JS is single-threaded lanaguage, and it cannot execute
 //setTimeout in parallel as our code is executed, so JS first execute
-//Synchronous Code and then it execute Asynchronous Code doesn't matter
+//Synchronous Code and then it execute Asynchronous Code,it doesn't matter
 //whether we delay the Asynchronous Code using setTimeout Asynchronous Code
 // is still going to execute at last
 

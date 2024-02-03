@@ -64,16 +64,17 @@ user.rc1();
 user.rc2();
 
 // this in function
-// function chai() {
-//   const username = "Afjal";
-//   console.log(this.username);
-  //undefined becoz here "this" is empty object
-// }
+function chai() {
+  const username = "Afjal";
+  console.log(this);
+  // undefined becoz here "this" is empty object
+}
+chai()
 
-const chai = () => {
+const coffee = () => {
   // const username = "Afjal";
   console.log(this.username);
   console.log(this);
   //undefined becoz here "this" is empty object
 };
-chai();
+coffee();

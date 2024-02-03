@@ -5,6 +5,9 @@ const user = {
   age: 23,
   //invalid properties becoz it contains spaces
   "like the video": true,
+  print: () => {
+    console.log("THis is name");
+  },
 };
 
 // Aceessing object properties(valid)
@@ -25,6 +28,11 @@ console.log(user);
 delete user["like the video"];
 console.log(user);
 
+
+//delete Object Method
+delete user.print()
+console.log(user)
+
 //? Remember the delete keyword can only delete the
 //? properties of an object, it can't delete a variables or the functions in local scope
 
@@ -36,9 +44,14 @@ const func = (function (a) {
 console.log(5); //5
 
 //Dynamically adding the varibales as properties
-let firstName = "Mohd";
-let secName = "Afjal";
+let firstName = "Mohd Afjal";
+let secName = "Sonu";
+
 var myName = {
-  [firstName]: secName,
+  firstName: secName,
 };
 console.log(myName);
+
+//Symbol a primitive datatype, for creating unique values
+const mySymbol = Symbol(45);
+console.log(mySymbol);

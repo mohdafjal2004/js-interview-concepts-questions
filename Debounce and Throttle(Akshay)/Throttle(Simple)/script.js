@@ -12,7 +12,7 @@ const handleThrottle = (fn, limit) => {
 
     //edge-case:Handling the "this" case and arguments
     let context = this;
-    args = argument;
+    let args = arguments;
 
     // Initial call the function
     if (flag) {

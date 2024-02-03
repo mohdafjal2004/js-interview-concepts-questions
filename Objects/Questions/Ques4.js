@@ -39,8 +39,12 @@ console.log({ a: 1 } == { a: 1 }); //false
 let person = { name: "Afjal" };
 const members = [person];
 person = null;
+//Sets person to null, This means the variable person no longer points to the object,
+//essentially "disconnecting" it.
+// but it doesn't affect the object in the members array.
+//The array still holds a reference to the original object.
 console.log(person);
-// This means the variable person no longer points to the object, essentially "disconnecting" it.
+
 console.log(members); //Output: [ { name: 'Afjal' } ]
 // if we put "person = null",it still gives output as the object
 //  becoz only the object refernce variable is set to null not the actual object
@@ -53,12 +57,13 @@ const multiply = (x = { ...value }) => {
 };
 
 //? Modifying the cloned(copy) object,not the original object
-multiply(); //20, here we are just cloning the value object and then
-// changing the data in cloned object, which won't change original object
+multiply(); //20,  creating shallow copy(using spread operator) of 
+//the "value" object which copies only the object value not the
+//reference(memory location) of the original object
+//  and then changing the data in shallow copy,
+// which won't change original object data
 
-//? Modifying the cloned(copy) object,not the original object
-multiply(); //20, here we are just cloning the value object and then
-// changing the data in cloned object, which won't change original object
+multiply();
 
 // ? Modifying the original object
 multiply(value);
@@ -71,4 +76,3 @@ multiply(value); //40, since in the previous function the data of original
 // parameter it will call the original object
 
 multiply(value);
-

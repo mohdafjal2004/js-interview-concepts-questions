@@ -15,6 +15,6 @@ const nums = [1, 2, 3, 4, 5];
 //3. 𝗮𝗿𝗿 is the array on which the map() method is applied
 
 const multiplyThree = nums.map((num, i) => {
-  return num * 3 + i;
+  return num * 3;
 });
 console.log(multiplyThree);

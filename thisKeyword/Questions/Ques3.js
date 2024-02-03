@@ -8,12 +8,12 @@ const calc = {
     this.total += a;
     return this;
   },
-  multiply(a) {
-    this.total *= a;
+  multiply(b) {
+    this.total *= b;
     return this;
   },
-  substract(a) {
-    this.total -= a;
+  substract(c) {
+    this.total -= c;
     return this;
   },
 };

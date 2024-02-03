@@ -7,10 +7,10 @@ const user = {
   },
 };
 
-// user.welcomeMessage(); //Output : Afjal , welcome to website
+user.welcomeMessage(); //Output : Afjal , welcome to website
 // Here we change  current context value
-// user.username = "Sonu";
-// user.welcomeMessage(); //Output : Sonu , welcome to website
+user.username = "Sonu";
+user.welcomeMessage(); //Output : Sonu , welcome to website
 // console.log(this); // Output : {}
 
 function chai() {
@@ -23,7 +23,7 @@ function coffee() {
   console.log(this.username);
 }
 
-// coffee();
+coffee();
 
 const roti = () => {
   const username = "Mohd Afjal"; 

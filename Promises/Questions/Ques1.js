@@ -3,7 +3,11 @@ console.log("Start");
 
 const promise1 = new Promise((resolve, reject) => {
   console.log(1);
+  //This is synchrnouse code and  executed immediately during promise
+  //creation even when the state of promise is pending
   resolve(2);
+  //It is asynchronous code which will be executed in next
+  //event loop cycle
 });
 
 promise1.then((res) => {
@@ -49,7 +53,7 @@ console.log("Start");
 const fn = () =>
   new Promise((resolve, reject) => {
     console.log(1);
-    // resolve(2);
+    resolve(2);
     console.log(3);
   });
 

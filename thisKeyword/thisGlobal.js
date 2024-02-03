@@ -1,7 +1,7 @@
 // Basics of "this" keyword
 
 //!Using "this" keyword for accessing global scope property
-
+console.log(this)
 //* Accessing "this" keyword property in global scope
 this.a = 5;
 console.log(this);

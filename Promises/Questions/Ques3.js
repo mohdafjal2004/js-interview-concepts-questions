@@ -17,12 +17,13 @@ let promise = job(true);
 
 promise
   .then(function (res) {
-    console.log(res);
+    console.log(res); //success
     return job(true);
   })
   .then(function (res) {
     if (res !== "victory") {
-      throw "Defeat"; //throw gives an error output
+      throw "Defeat"; //throw rejects the promise, stopping further
+      //.then() calls
     }
 
     // Since the promise is rejected, then this line is ignored
@@ -54,6 +55,9 @@ promise
     console.log(error);
     return "Error Caught"; //This line is just for confusion
     // becoz this line returns a resolved Promise
+
+    //Key Point: Returning a resolved promise
+    // from a .catch() resumes the chain.
   })
 
   //   this will not be skipped becoz the Rejected promise in 1st
@@ -63,10 +67,9 @@ promise
   //.then() block
   .then(function (res) {
     console.log(res);
-    return new Error("Test");//This line is also for confusion
+    return new Error("Test"); //This line is also for confusion
     // Here Error is also an String, so it
     // will not reject the Promise
-
 
     //The data from above confusing line is handled by below .then() block
   })

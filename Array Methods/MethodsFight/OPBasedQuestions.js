@@ -21,7 +21,7 @@ const Mapnames = students.map((stu) => stu.name.toUpperCase());
 
 //! Q2: Get only the details of those students who scored more than 60 marks
 const goodStudents = students.filter((stu) => stu.marks > 60);
-// console.log(goodStudents);
+console.log(goodStudents);
 
 //! Q3 :Get only the details of those students who scored more than 60 marks
 //!and whose roll numbers are more than 15

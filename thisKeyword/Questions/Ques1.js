@@ -38,23 +38,27 @@ function makeUser2Fix() {
 }
 
 let user2Fix = makeUser2Fix();
-console.log(user2Fix.ref().name);
+console.log(user2Fix.ref.name);
 
 // * Q-3 : What's the output?
 const user3 = {
-  name: "MOhd Afjal",
+  name: "Mohd Afjal",
   logMessage() {
     console.log(this.name); //What is logged?
   },
 };
-setTimeout(user3.logMessage, 1000); //Undefined
-//Inside the setTimeOut function, whatever is passed is treated as
-//callback function not as a method, so in this case `user3.logMessage` is
+setTimeout(user3.logMessage, 1000);
+
+//Undefined
+//Inside the setTimeOut function, whatever a method with "this" context
+// is passed is treated as
+//callback function(or as an argument of the function)
+// not as a method, so in this case `user3.logMessage` is
 //now treated as callback function and callback function are executed
 //indepenedently so the `user.logMessage` is no longer have access to this
 // user3 object properties, so it will result into 𝘂𝗻𝗱𝗲𝗳𝗶𝗻𝗲𝗱 ,else
 //in this case the `user.logMessage` now only has access to window
-//object
+//object, so to handle this user explicit keyword binding using "bind()"
 
 // Fixing the method and callBack function
 //So here we just try to avoid to call the `user.logMessage`  as callback

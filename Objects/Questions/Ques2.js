@@ -20,16 +20,17 @@ const obj = JSON.parse(str);
 console.log(obj.age);
 
 console.log(localStorage.getItem("test"));
-//Rememberto parse object back to JS object
+//Remember to parse object back to JS object
 
 // * Q-5 :- Whats the output ?
-console.log([..."Mohd Afjal"]);//Spread operator on the String
+console.log([..."Mohd Afjal"]); //Spread operator on the String
 // Output: ['M', 'o', 'h', 'd', ' ', 'A', 'f', 'j', 'a', 'l']
 
+console.log("Mohd Afjal".split(""));
 
 // Spread operator on object
 const user2 = { name: "Afjal", age: 23 };
-const admin = { admin: true, ...user };
+const admin = { admin: true, ...user2 };
 console.log(admin);
 
 // * Q-6 What's the output?
@@ -38,5 +39,6 @@ const settings = {
   level: 23,
   health: 99,
 };
+
 const data = JSON.stringify(settings, ["level", "health"]);
 console.log(data);
